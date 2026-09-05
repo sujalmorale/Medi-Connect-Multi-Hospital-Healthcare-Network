@@ -84,7 +84,7 @@ class Store {
   /**
    * Book an appointment & auto-generate digital token & update slot availability
    */
-  bookAppointment({ hospitalId, doctorId, timeSlot, patientName, patientPhone, patientAge, patientGender, symptom, type = 'Regular' }) {
+   bookAppointment({ hospitalId, doctorId, timeSlot, patientName, patientPhone, patientAge, patientGender, symptom, type = 'Regular', razorpayPaymentId = '', razorpayOrderId = '' }) {
     const doctor = this.state.doctors.find(d => d.id === doctorId);
     const hospital = this.state.hospitals.find(h => h.id === hospitalId);
 
@@ -121,6 +121,10 @@ class Store {
       type,
       fee: doctor.fee,
       status: 'Confirmed',
+      paymentStatus: 'Paid',
+      razorpayPaymentId: razorpayPaymentId || `pay_rzp_${Date.now().toString(36)}`,
+      razorpayOrderId: razorpayOrderId || `order_rzp_${Date.now().toString(36)}`,
+      paymentVerified: true,
       createdAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
 

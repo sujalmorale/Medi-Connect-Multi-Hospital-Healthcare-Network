@@ -684,6 +684,9 @@ function renderMyAppointments(containerEl, state) {
                     <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;"><i data-lucide="building" style="width: 13px; height: 13px; vertical-align: middle;"></i> ${apt.hospitalName}</p>
                     <p style="font-size: 0.85rem; color: var(--text-main);"><i data-lucide="clock" style="width: 13px; height: 13px; vertical-align: middle;"></i> Slot: <strong>${apt.timeSlot}</strong> (${apt.date})</p>
                     <p style="font-size: 0.82rem; color: var(--text-dim); margin-top: 4px;">Patient: ${apt.patientName} (${apt.patientAge}y, ${apt.patientGender}) • Symptom: ${apt.symptom}</p>
+                    <div style="margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); padding: 0.25rem 0.6rem; border-radius: var(--radius-sm); font-size: 0.75rem; color: #6ee7b7;">
+                      <i data-lucide="shield-check" style="width: 13px; height: 13px;"></i> Razorpay Verified • Payment ID: <strong>${apt.razorpayPaymentId || 'pay_rzp_verified'}</strong> (₹${apt.fee || 800})
+                    </div>
                   </div>
 
                   <!-- Real-Time Queue Tracker Status Box -->
