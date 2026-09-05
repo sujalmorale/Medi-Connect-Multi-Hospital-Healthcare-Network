@@ -43,11 +43,17 @@ function renderHospitalsAndDoctors(containerEl, state, openBookingModal) {
               <option value="">All Mumbai Live Locations</option>
               <option value="Bandra">Bandra West</option>
               <option value="Andheri">Andheri West</option>
-              <option value="South Mumbai">South Mumbai</option>
+              <option value="South Mumbai">South Mumbai (Breach Candy)</option>
               <option value="Mulund">Mulund West</option>
               <option value="Girgaon">Girgaon / Grant Road</option>
               <option value="Powai">Powai</option>
               <option value="Vile Parle">Vile Parle West</option>
+              <option value="Navi Mumbai">Navi Mumbai (Belapur & Uran)</option>
+              <option value="Borivali">Borivali & Kandivali</option>
+              <option value="Goregaon">Goregaon & Oshiwara</option>
+              <option value="Thane">Thane & Vikhroli</option>
+              <option value="Dadar">Dadar & Worli</option>
+              <option value="Santacruz">Santacruz & Ghatkopar</option>
             </select>
           </div>
           <div style="flex: 1; min-width: 170px;">
